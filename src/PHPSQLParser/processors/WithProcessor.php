@@ -70,6 +70,11 @@ class WithProcessor extends AbstractProcessor {
 			$trim = trim($token);
             switch ($upper) {
 
+              case 'RECURSIVE':
+              // TODO: add this to the parameters
+              // for now at least don't match it as table name
+              break;
+
             case 'AS':
             	if ($prev !== 'TABLENAME') {
             		// error or tablename is AS
